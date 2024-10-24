@@ -1,32 +1,6 @@
-def botao_0():
-    label_result.config(text=0)
-
-def botao_1():
-    label_result.config(text=1)
-
-def botao_2():
-    label_result.config(text=2)
-
-def botao_3():
-    label_result.config(text=3)
-
-def botao_4():
-    label_result.config(text=4)
-    
-def botao_5():
-    label_result.config(text=5)
-
-def botao_6():
-    label_result.config(text=6)
-
-def botao_7():
-    label_result.config(text=7)
-
-def botao_8():
-    label_result.config(text=8)
-
-def botao_9():
-    label_result.config(text=3)
+def botao_numero(numero):
+    valor_armazenado += numero
+    return valor_armazenado
 
 def dot():
     label_result.config(text='.')
@@ -46,6 +20,7 @@ def sum():
 def result():
     global result
 
+
 from tkinter import *
 import tkinter as tk
 
@@ -57,14 +32,13 @@ tela_calculadora.config(bg="black")
 frame_central = Frame(tela_calculadora, bg='black') #tamanho do grupo (frame)
 frame_central.place(relx=0.5, rely=0.5, anchor=CENTER)
 
-photo_clear = PhotoImage(file='calculadora/clear.png')
 
 label_result = Label(frame_central, text='result')
 label_result.config(width=10)
 label_result.config(font=('Arial',46))
 
 button_0 = Button(frame_central,
-                 command=botao_0,
+                 command= botao_numero(0),
                  text="0",
                  width=4,
                  height=2,
@@ -73,6 +47,7 @@ button_0 = Button(frame_central,
                  fg='orange',
                  bg='gray')
 button_1 = Button(frame_central, 
+                 command= botao_numero(1),
                  text="1",
                  width=4,
                  height=2,
@@ -81,6 +56,7 @@ button_1 = Button(frame_central,
                  fg='orange',
                  bg='gray')
 button_2 = Button(frame_central, 
+                 command= botao_numero(2),
                  text="2",
                  width=4,
                  height=2,
@@ -90,6 +66,7 @@ button_2 = Button(frame_central,
                  bg='gray')
 button_3 = Button(frame_central, 
                  text="3",
+                 command= botao_numero(3),
                  width=4,
                  height=2,
                  relief='raised',
@@ -97,6 +74,7 @@ button_3 = Button(frame_central,
                  fg='orange',
                  bg='gray')
 button_4 = Button(frame_central, 
+                 command= botao_numero(4),
                  text="4",
                  width=4,
                  height=2,
@@ -105,6 +83,7 @@ button_4 = Button(frame_central,
                  fg='orange',
                  bg='gray')
 button_5 = Button(frame_central, 
+                 command= botao_numero(5),
                  text="5",
                  width=4,
                  height=2,
@@ -113,6 +92,7 @@ button_5 = Button(frame_central,
                  fg='orange',
                  bg='gray')
 button_6 = Button(frame_central, 
+                 command= botao_numero(6),
                  text="6",
                  width=4,
                  height=2,
@@ -121,6 +101,7 @@ button_6 = Button(frame_central,
                  fg='orange',
                  bg='gray')
 button_7 = Button(frame_central, 
+                 command= botao_numero(7),
                  text="7",
                  width=4,
                  height=2,
@@ -129,6 +110,7 @@ button_7 = Button(frame_central,
                  fg='orange',
                  bg='gray')
 button_8 = Button(frame_central, 
+                 command= botao_numero(8),
                  text="8",
                  width=4,
                  height=2,
@@ -137,6 +119,7 @@ button_8 = Button(frame_central,
                  fg='orange',
                  bg='gray')
 button_9 = Button(frame_central, 
+                 command= botao_numero(9),
                  text="9",
                  width=4,
                  height=2,
@@ -144,6 +127,9 @@ button_9 = Button(frame_central,
                  font=('Arial',20,'bold'),
                  fg='orange',
                  bg='gray')
+
+valor_armazenado = 0
+armazenar_valor = botao_numero()
 
 button_dot = Button(frame_central, 
                  text=".",
@@ -170,7 +156,6 @@ button_sum = Button(frame_central,
                  relief='raised',
                  fg='orange',
                  bg='gray')
-
 button_minus = Button(frame_central, 
                  text="-",
                  width=4,
@@ -195,7 +180,6 @@ button_divided = Button(frame_central,
                  relief='raised',
                  fg='orange',
                  bg='gray')
-            
 button_percent = Button(frame_central, 
                  text="%",
                  width=4,
