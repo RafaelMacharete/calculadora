@@ -11,7 +11,6 @@ def botao_numero(numero):
 
 def dot():
     global valor_armazenado
-    # Checa se o número atual já tem um ponto
     if "." not in valor_armazenado.split("+")[-1].split("-")[-1].split("*")[-1].split("/")[-1]:
         valor_armazenado += "."
         resultado_label.config(text=valor_armazenado)
